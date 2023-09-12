@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page with Video and Special Offers</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Basic styling for the page */
+        body {
+            background-color: #ffffff;
+            color: #000;
+        }
+
+        /* Styling for the navigation bar */
+        .navbar {
+            background-color: #4CAF50;
+        }
+
+        .navbar-brand {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+
+        .navbar-nav .nav-link:hover {
+            text-decoration: underline;
+            text-decoration-color: #003300;
+        }
+
+        /* Styling for the search bar and language button */
+        .search-bar {
+            margin-right: 10px;
+        }
+
+        .language-button {
+            background-color: #4CAF50;
+            color: #ffffff;
+            border: none;
+        }
+
+        /* Styling for special offer cards */
+        .special-offers {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping to next row */
+            margin-top: 20px;
+        }
+
+        .card {
+            flex: 0 0 calc(25% - 20px); /* Adjust the width of cards (25% for four cards) */
+            height: 350px; /* Set a fixed height for the cards */
+            margin-right: 20px; /* Add some space between cards */
+            border-radius: 15px; /* Rounded borders */
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:last-child {
+            margin-right: 0; /* Remove margin for the last card */
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        /* Different shades of cards */
+        .card:nth-child(1) {
+            background-color: #66bb6a;
+        }
+
+        .card:nth-child(2) {
+            background-color: #388e3c;
+        }
+
+        .card:nth-child(3) {
+            background-color: #64b5f6;
+        }
+
+        .card:nth-child(4) {
+            background-color: #1976d2;
+        }
+
+        .card-title {
+            min-height: 3.5rem;
+        }
+
+        .card-text {
+            flex-grow: 1;
+        }
+
+        /* Style for the carousel */
+        .carousel {
+            background-color: #ffffff;
+            margin-top: 20px;
+        }
+
+        .carousel-item {
+            text-align: center;
+        }
+
+        /* Different shades of blue for carousel items */
+        .carousel-item:nth-child(1) {
+            background-color: #64b5f6;
+        }
+
+        .carousel-item:nth-child(2) {
+            background-color: #1976d2;
+        }
+
+        .carousel-item:nth-child(3) {
+            background-color: #64b5f6;
+        }
+
+        .carousel-item:nth-child(4) {
+            background-color: #1976d2;
+        }
+
+        /* Text color for carousel items */
+        .carousel-item-text {
+            color: #000;
+        }
+
+        /* Styling for the logo image */
+.navbar-logo {
+    width: 100px; /* Set the desired width for the logo */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Ensure the image is a block element */
+    margin: 0 auto; /* Center the image horizontally within the navbar */
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+    <!-- logo new-->
+            <a class="navbar-brand" href="#">
+                <img src="https://upload-cdn.careem.com/careem_logo_new_36c7f7d5bd.png" alt="Careem" class="navbar-logo">
+            </a>
+            
+         <!-- LOGO
+ 
+            <a class="navbar-brand" href="#"> <img src="https://upload-cdn.careem.com/careem_logo_new_36c7f7d5bd.png" alt="Careem"> </a>
+            This is a comment -->
+            
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="page1.html">Location</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page2.html">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page3.html">Contact us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page4.html">Products</a>
+                </li>
+            </ul>
+
+            <!-- Search Bar -->
+            <form class="form-inline my-2 my-lg-0 search-bar">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+            <!-- Language Button -->
+            <button class="btn language-button" id="language-toggle">English</button>
+        </div>
+    </nav>
+
+    <!-- Video Section -->
+    <section data-v-15ab2aa8="" class="hero hero-slider mb-7 lg:mb-8 lg:mt-2 pb-0 border-0"><div data-v-15ab2aa8="" class="w-full container-xl px-4 xxl:px-0 rounded-lg lg:rounded-3xl overflow-hidden"><div data-v-3d1a4f76="" data-v-15ab2aa8="" class="slick-slider slick-initialized"><div data-v-3d1a4f76="" class="slick-list"><div data-v-e4caeaf8="" data-v-3d1a4f76="" class="slick-track" style="width: 997px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition: -webkit-transform 600ms ease 0s;"><div data-v-e4caeaf8="" tabindex="-1" data-index="0" aria-hidden="false" class="slick-slide slick-active slick-current" style="outline: none; width: 997px;"><div data-v-e4caeaf8=""><div data-v-15ab2aa8="" data-v-e4caeaf8="" tabindex="-1" class="w-full inline-block container-xl" style="width: 100%; display: inline-block;"><div data-v-15ab2aa8="" data-v-e4caeaf8="" class="hero-col hero-slider-cont overflow-hidden justify-between items-center rounded-lg lg:flex-row lg:rounded-3xl relative bg-boxed-"><div data-v-15ab2aa8="" data-v-e4caeaf8="" class="hero-image flex justify-end w-full rounded-lg lg:rounded-3xl"><div data-v-15ab2aa8="" data-v-e4caeaf8="" class="video-container w-full"><video data-v-15ab2aa8="" data-v-e4caeaf8="" src="https://upload-cdn.careem.com/2023_05_05_Careem_New_Brand_Video_Cutdown_04_1920_X1080_Online_Mix_851c26c68a.mp4" autoplay="autoplay" playsinline="" loop="loop" muted="muted" class="w-full h-full object-cover z-0 rounded-lg lg:rounded-3xl"></video> <div data-v-15ab2aa8="" data-v-e4caeaf8="" class="tint w-full h-full z-10 absolute top-0"></div></div></div> <!----></div></div></div></div></div></div></div></div></section>
+    <!-- Your video section code goes here -->
+
+    <!-- Special Offer Cards -->
+    <div class="container special-offers">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">15 km Discount</h5>
+                <p class="card-text">Get a special discount on car rentals for 15 km trips.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">30 km Discount</h5>
+                <p class="card-text">Enjoy discounted fares for 30 km car rides.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">50 km Discount</h5>
+                <p class="card-text">Special offers on fares for 50 km car trips.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Monthly Route Discount</h5>
+                <p class="card-text">Exclusive monthly route discount for regular travelers.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel Section -->
+    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-item-text">
+                    <h3>Bike Ride - 10% Discount</h3>
+                    <p>Enjoy a 10% discount on bike rides!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-item-text">
+                    <h3>Monthly Pick and Drop - 30% Discount</h3>
+                    <p>Get a 30% discount on monthly pick and drop bike rides.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-item-text">
+                    <h3>Over 20km Bike Rides - 25% Discount</h3>
+                    <p>Special offer: 25% off on bike rides over 20km!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-item-text">
+                    <h3>Car Ride - 35% Discount (Monthly)</h3>
+                    <p>Get a 35% discount on monthly car ride packages.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- Your carousel section code goes here -->
+
+    <!-- Introduction Section -->
+    <section class="container intro-section mb-4">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>About Careem</h2>
+                <p>Careem is a leading ride-hailing company committed to making transportation accessible and reliable across the Middle East and South Asia. We provide safe, affordable, and convenient transportation services for millions of people.</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <a href="page4.html" class="btn btn-success btn-lg read-more-button mt-4">Read More</a>
+            </div>
+        </div>
+    </section>
+    <!-- Your introduction section code goes here -->
+
+    <!-- Footer Section -->
+    <footer class="container-fluid bg-dark text-light py-4 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Head Office: Karachi, Pakistan</p>
+                    <p><i class="fas fa-phone-alt"></i> Telephone: +92-123-456789</p>
+                    <p><i class="fas fa-mobile-alt"></i> Mobile: +92-987-654321</p>
+                    <p><i class="fas fa-fax"></i> Fax: +92-555-123456</p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" class="social-icon mx-3"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.twitter.com" class="social-icon mx-3"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com" class="social-icon mx-3"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Your footer section code goes here -->
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript for Language Toggle -->
+    <script>
+        const languageButton = document.getElementById("language-toggle");
+        let currentLanguage = "English";
+
+        languageButton.addEventListener("click", () => {
+            if (currentLanguage === "English") {
+                // Switch to Arabic
+                document.documentElement.setAttribute("lang", "ar");
+                languageButton.textContent = "عربي";
+                currentLanguage = "Arabic";
+            } else {
+                // Switch back to English
+                document.documentElement.setAttribute("lang", "en");
+                languageButton.textContent = "English";
+                currentLanguage = "English";
+            }
+        });
+    </script>
+</body>
+</html>
+
